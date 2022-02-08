@@ -9,6 +9,12 @@ const restaurantsSchema = new Schema({
     type:String,
     default:""
    },
+   restaurantLatitude:{
+       type:String
+   },
+   restaurantLongitude:{
+    type:String
+   },
    restaurantRating:{
        type:Number,
        default:0

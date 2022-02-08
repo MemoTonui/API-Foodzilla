@@ -50,6 +50,8 @@ export const deleteUser = async (req, res) => {
   res.json({ message: "User Deleted" });
 };
 
+
+//Find user by id
 export const findUserById = async (req, res) => {
   const { id: _id } = req.params;
 
@@ -61,6 +63,18 @@ export const findUserById = async (req, res) => {
   res.json(user);
 };
 
+//Find User by phone number
+export const findUserByPhoneNumber = async (req,res) =>{
+  const {phoneNumber} = req.params;
+  try {
+    const users = await User.find({
+      phoneNumber: { $eq: phoneNumber },
+    });
+    res.status(200).json(users);
+  } catch (error) {
+    res.status(404).send(error);
+  }
+};
 
 //Get Orders Made By A User
 export const getUsersOrders = async (req,res) =>{

@@ -3,6 +3,7 @@ import {
   createUser,
   deleteUser,
   findUserById,
+  findUserByPhoneNumber,
   getUsers,
   getUsersOrders,
   makeOrder,
@@ -21,6 +22,8 @@ router.patch("/:id", updateUser);
 router.delete("/:id", deleteUser);
 
 router.get("/:id", findUserById);
+
+router.get("/phone/:phoneNumber", findUserByPhoneNumber);
 
 router.get("/:id/orders", getUsersOrders);
 
