@@ -39,6 +39,7 @@ export const updateUser = async (req, res) => {
   res.json(updatedUser);
 };
 
+
 export const deleteUser = async (req, res) => {
   const { id } = req.params;
 

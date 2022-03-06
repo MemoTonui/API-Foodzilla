@@ -5,6 +5,9 @@ const userSchema = new Schema({
        type:String,
        required:true
    },
+   firebaseUid:{
+       type:String
+   },
    fullName:{
        type: String
    },

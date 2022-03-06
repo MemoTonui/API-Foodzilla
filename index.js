@@ -6,6 +6,7 @@ import dotenv from 'dotenv';
 import restaurantRoutes from './routes/restaurant.js'
 import foodRoutes from './routes/food.js';
 import userRoutes from './routes/users.js';
+import orderRoutes from './routes/orders.js';
 
 
 const app = express();
@@ -17,6 +18,7 @@ app.use(bodyParser.json());
 app.use('/restaurants',restaurantRoutes);
 app.use('/foods',foodRoutes);
 app.use('/users',userRoutes);
+app.use('/orders',orderRoutes);
 
 /*
 app.use('/users',userRoutes);
