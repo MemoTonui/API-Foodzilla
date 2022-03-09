@@ -15,6 +15,9 @@ const foodsSchema = new Schema({
    foodImgUrl:{
        type:String
    },
+   foodDescription:{
+    type:String
+},
    restaurant:{
     type:Schema.Types.ObjectId,
     ref:'Restaurant'
