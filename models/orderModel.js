@@ -13,7 +13,7 @@ const orderSchema = new Schema({
       required:true
   },
   food:[{
-    type:Food,
+    type:Object,
   }],
   user:{
     type:Schema.Types.ObjectId,
