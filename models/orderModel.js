@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import Food from './foodsModel';
+import Food from './foodsModel.js';
 var Schema = mongoose.Schema;
 const orderSchema = new Schema({
   subTotal:{

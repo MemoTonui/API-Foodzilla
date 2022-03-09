@@ -1,6 +1,6 @@
 import { async } from "@firebase/util";
 import mongoose from "mongoose";
-import Order from "../models/orderModel";
+import Order from "../models/orderModel.js";
 
 //Get All Orders
 export const getAllOrders = async (req, res) => {
