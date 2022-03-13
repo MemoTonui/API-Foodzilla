@@ -18,6 +18,10 @@ const orderSchema = new Schema({
   user:{
     type:Schema.Types.ObjectId,
     ref:'User'
+  },
+  status:{
+    type: String,
+    default:"Pending"
   }
 });
 const Order = mongoose.model('Order',orderSchema);
