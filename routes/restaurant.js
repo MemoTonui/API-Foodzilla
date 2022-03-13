@@ -1,5 +1,5 @@
 import express from 'express';
-import { AddARestaurant, addFoodsToARestaurant, FindRestaurantById, getAllRestaurants, getFoodsInARestaurant } from '../controllers/restaurantController.js';
+import { AddARestaurant, addFoodsToARestaurant, filterRestaurant, FindRestaurantById, getAllRestaurants, getFoodsInARestaurant } from '../controllers/restaurantController.js';
 
 const router = express.Router();
 
@@ -12,5 +12,5 @@ router.post('/new', AddARestaurant);
 router.post('/:id/food/new', addFoodsToARestaurant);
 
 router.get('/:id/food', getFoodsInARestaurant);
-
+router.get("/:restaurantName",filterRestaurant);
 export default router;

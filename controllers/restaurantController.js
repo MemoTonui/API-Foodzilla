@@ -83,6 +83,18 @@ export const getFoodsInARestaurant = async (req,res) =>{
   
   };
 
+  //Get users with phone
+export const filterRestaurant = async (req, res)=> {
+  try {
+    const restaurant = await Restaurant.find({
+      restaurant: { $eq: req.params.restaurantName },
+    });
+    res.json(restaurant);
+  } catch (error) {
+    res.status(404).send(error);
+  }
+};
+
 
 
 
