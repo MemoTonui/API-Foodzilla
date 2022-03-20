@@ -15,8 +15,8 @@ const restaurantsSchema = new Schema({
        default:0
    },
    restaurantStatus:{
-       type:Boolean,
-       default:true
+       type:String,
+       default:"isOpen"
    },
    restaurantImgUrl:{
        type:String,
