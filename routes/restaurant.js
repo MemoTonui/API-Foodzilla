@@ -1,5 +1,5 @@
 import express from 'express';
-import { AddARestaurant, addFoodsToARestaurant, filterRestaurant, FindRestaurantById, getAllRestaurants, getFoodsInARestaurant } from '../controllers/restaurantController.js';
+import { AddARestaurant, addFoodsToARestaurant, deleteRestaurant, filterRestaurant, FindRestaurantById, getAllRestaurants, getFoodsInARestaurant } from '../controllers/restaurantController.js';
 
 const router = express.Router();
 
@@ -14,5 +14,5 @@ router.post('/:id/food/new', addFoodsToARestaurant);
 router.get('/:id/food', getFoodsInARestaurant);
 router.get("/:restaurantName",filterRestaurant);
 
-router.delete("/:id");
+router.delete("/:id",deleteRestaurant);
 export default router;
