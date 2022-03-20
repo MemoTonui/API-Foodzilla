@@ -25,3 +25,15 @@ export const findFoodById = async (req, res) => {
   const food = await Food.findById(_id);
   res.json(food);
 };
+
+export const deleteFood = async (req, res) => {
+  const { id } = req.params;
+
+  if (!mongoose.Types.ObjectId.isValid(id))
+    return res.status(404).send("This food doesn't exist");
+
+  await Food.findByIdAndRemove(id);
+
+  res.json({ message: "Food Deleted" });
+};
+
