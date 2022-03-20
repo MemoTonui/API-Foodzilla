@@ -106,6 +106,18 @@ export const deleteRestaurant = async (req, res) => {
   res.json({ message: "Restaurant Deleted" });
 };
 
+export const updateRestaurant = async (req, res) => {
+  const { id: _id } = req.params;
+  const restaurant = req.body;
+
+  //Checks if the user exists and if the id is valid
+  if (!mongoose.Types.ObjectId.isValid(_id))
+    return res.status(404).send("This restaurant does not exist");
+
+  const updatedRestaurant = await Restaurant.findByIdAndUpdate(_id, restaurant, { new: true });
+  res.json(updatedRestaurant);
+};
+
 
 
 
