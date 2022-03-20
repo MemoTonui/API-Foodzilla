@@ -32,7 +32,11 @@ const userSchema = new Schema({
    orders:[{
     type:Schema.Types.ObjectId,
     ref:'Order'
-   }]
+   }],
+   status:{
+       type:Boolean,
+       default:true
+   }
 
 });
 const User = mongoose.model('User',userSchema);

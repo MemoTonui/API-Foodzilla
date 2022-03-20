@@ -19,6 +19,10 @@ const orderSchema = new Schema({
     type:Schema.Types.ObjectId,
     ref:'User'
   },
+  date:{
+    type:Date,
+  default: Date.now },
+
   status:{
     type: String,
     default:"Pending"

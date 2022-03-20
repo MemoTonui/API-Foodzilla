@@ -13,4 +13,6 @@ router.post('/:id/food/new', addFoodsToARestaurant);
 
 router.get('/:id/food', getFoodsInARestaurant);
 router.get("/:restaurantName",filterRestaurant);
+
+router.delete("/:id");
 export default router;

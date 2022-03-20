@@ -95,6 +95,18 @@ export const filterRestaurant = async (req, res)=> {
   }
 };
 
+export const deleteRestaurant = async (req, res) => {
+  const { id } = req.params;
+
+  if (!mongoose.Types.ObjectId.isValid(id))
+    return res.status(404).send("Restaurant doesn't exist");
+
+  await Restaurant.findByIdAndRemove(id);
+
+  res.json({ message: "Restaurant Deleted" });
+};
+
+
 
 
 
