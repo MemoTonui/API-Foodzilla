@@ -83,7 +83,7 @@ export const getFoodsInARestaurant = async (req,res) =>{
   
   };
 
-  //Get users with phone
+  //search restaurant
 export const filterRestaurant = async (req, res)=> {
   try {
     const restaurant = await Restaurant.find({
@@ -110,7 +110,7 @@ export const updateRestaurant = async (req, res) => {
   const { id: _id } = req.params;
   const restaurant = req.body;
 
-  //Checks if the user exists and if the id is valid
+  //Checks if the restaurant exists and if the id is valid
   if (!mongoose.Types.ObjectId.isValid(_id))
     return res.status(404).send("This restaurant does not exist");
 
